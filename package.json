@@ -1,0 +1,30 @@
+{
+  "name": "srmbandsid",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt generate",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/apollo": "^4.0.1-rc.5",
+    "@nuxt/content": "^1.7.0",
+    "@nuxtjs/axios": "^5.12.0",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "node-sass": "^7.0.3",
+    "nuxt": "^2.12.2",
+    "nuxt-buefy": "^0.3.31",
+    "plyr": "^3.6.2",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2",
+    "vue": "^2.6.6",
+    "vue-plyr": "^6.0.4",
+    "vue-server-renderer": "^2.6.6",
+    "vue-template-compiler": "^2.6.6",
+    "webpack": "^5.74.0"
+  }
+}

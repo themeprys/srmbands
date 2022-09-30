@@ -1,0 +1,17 @@
+query getObjects($slug: String!){
+    getObjects(
+    bucket_slug: "srmbands-cms-production",
+    read_key: "U9ZScPK1VQrXnFkthLhnRNdXjHjnkSvxBSFAMU4QtpTQWRULIl",
+        input: {
+            query: { slug: $slug }
+                }
+    ) {
+		          objects {
+                      id
+			          content
+			          title
+			          metadata
+                      slug
+		          }
+    	        }
+}

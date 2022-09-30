@@ -1,0 +1,38 @@
+<template>
+<div>
+  <UnderMaintenance />
+</div>
+</template>
+
+<script>
+export default {
+  layout: 'maintenance',
+  data() {
+    return {
+      title: "SRM Bands Official Site - Bookings & Services",
+      content: "Simpel, Ramah dan Memuaskan. We are SRM Bands Bookings and Services."
+    };
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.content
+        },
+      ],
+    };
+  },
+    
+// head() {
+//     return {
+//       script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
+//     };
+//   },  
+  // layout: 'home',
+
+}
+</script>

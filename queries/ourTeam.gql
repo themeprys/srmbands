@@ -1,0 +1,21 @@
+{
+  getObjects(
+    bucket_slug: "srmbands-cms-production", 
+    read_key: "U9ZScPK1VQrXnFkthLhnRNdXjHjnkSvxBSFAMU4QtpTQWRULIl",
+    input: {
+      query: {
+        type: "our-team",
+        slug: "our-team"
+      }
+      props: "title,content,metadata"
+    }
+  ) {
+    objects {
+      title
+      content
+      metadata
+      slug
+      id
+    }
+  }
+}
