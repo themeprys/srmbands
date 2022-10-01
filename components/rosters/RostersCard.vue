@@ -1,5 +1,6 @@
 <template>
-  <div class="columns is-multiline" v-if="getObjects">
+  <div class="columns is-multiline">
+    <template v-if="getObjects">
     <div class="column is-4" v-for="roster in getObjects.objects" :key="roster.id">
       <div class="card px-3 srm_newslist">
         <router-link :to="'/rosters/' + roster.slug">
@@ -22,6 +23,7 @@
         </router-link>
       </div>
     </div>
+    </template>
     <template v-if="!getObjects">
       <div class="column is-4" v-for="i in skeleton" :key="i">
         <div class="card px-3 srm_newslist">

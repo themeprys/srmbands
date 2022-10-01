@@ -1,5 +1,6 @@
 <template>
-  <div class="columns is-multiline"  v-if="data">
+  <div class="columns is-multiline">
+    <template   v-if="data">
     <div class="column is-4" v-for="event in data.objects" :key="event.id">
       <div class="card px-3 srm_newslist">
         <router-link :to="/event/ + event.slug">
@@ -25,6 +26,7 @@
         </router-link>
       </div>
     </div>
+    </template>
     <template v-if="!data">
       <div class="column is-4" v-for="i in skeleton" :key="i">
         <div class="card px-3 srm_newslist">

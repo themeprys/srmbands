@@ -3,6 +3,8 @@
     bucket_slug: "srmbands-cms-production",
     read_key: "U9ZScPK1VQrXnFkthLhnRNdXjHjnkSvxBSFAMU4QtpTQWRULIl",
     input: {
+		sort: created_at_asc
+
     query: {
       type: "rosters"
     }

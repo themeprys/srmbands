@@ -1,5 +1,6 @@
 <template>
-  <div v-if="data" >
+  <div>
+    <template v-if="data">
     <section class="section" v-for="roster in data.objects" :key="roster.id">
       <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
         <ul>
@@ -28,6 +29,7 @@
         </div>        
       </div>
     </section>
+    </template>
     <template v-if="!data">
       <section class="section">
         <div class="column is-half is-offset-one-quarter mgb-large">

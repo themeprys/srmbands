@@ -1,10 +1,11 @@
 <template>
-  <div class="columns is-multiline"  v-if="data">
+  <div class="columns is-multiline">
+    <template v-if="data">
     <div class="column is-4" v-for="news in data.objects" :key="news.id">
       <div class="card px-3 srm_newslist">
         <router-link :to="/news/ + news.slug">
           <div class="card-image">
-            <figure class="image is-16by9">
+            <figure class="image is-4by3">
               <img
                 :src="news.metadata.foto.url"
                 alt="Placeholder image"
@@ -22,6 +23,7 @@
         </router-link>
       </div>
     </div>
+    </template>
     <template v-if="!data">
       <div class="column is-4" v-for="i in skeleton" :key="i">
         <div class="card px-3 srm_newslist">

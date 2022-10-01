@@ -1,4 +1,12 @@
 <template>
+  <div class="srm_helplist">
+    <div class="columns sectiontitle">
+      <div class="column is-12 has-text-centered">
+        <h1>Happy To Help</h1>
+        <hr class="helpline" />
+      </div>
+    </div>
+
   <div class="columns is-multiline" v-if="getObjects">
     <div class="column is-4" v-for="help in getObjects.objects" :key="help.id">
       <div class="card px-3 srm_newslist">
@@ -43,13 +51,14 @@
       </div>
     </template>
   </div>
+  </div>
 </template>
 
 <script>
 import getObjects from "~/queries/allHappytohelps";
 
 export default {
-    name: 'happy',
+  name: "happy",
   data() {
     return {
       // listArtist: null,
@@ -57,11 +66,11 @@ export default {
     };
   },
   apollo: {
-  getObjects: {
+    getObjects: {
       prefetch: true,
-      query: getObjects
-    }
-  }, 
+      query: getObjects,
+    },
+  },
 };
 </script>
 
