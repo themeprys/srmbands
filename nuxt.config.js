@@ -77,10 +77,13 @@ export default {
       src: '~/plugins/vue-plyr',
       ssr: false
     },
+    // { 
+    //   src: '~plugins/ga.js', 
+    //   mode: 'client' 
+    // },
     { 
-      src: '~plugins/ga.js', 
-      mode: 'client' 
-    }
+      src: '~plugins/filterDate.js'
+    },    
   ],
   /*
   ** Auto import components

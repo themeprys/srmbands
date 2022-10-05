@@ -8,7 +8,7 @@
     </div>
 
   <div class="columns is-multiline" v-if="getObjects">
-    <div class="column is-4" v-for="help in getObjects.objects" :key="help.id">
+    <div class="column is-4" v-for="help in listHappydalam" :key="help.id">
       <div class="card px-3 srm_newslist">
         <router-link :to="'/help/' + help.slug">
           <div class="card-image">
@@ -71,6 +71,15 @@ export default {
       query: getObjects,
     },
   },
+  computed: {
+    listHappydalam() {
+      return this.getObjects.objects.slice().sort((a, b) => {
+        return (
+          new Date(a.created_at) - new Date(b.created_at)
+        );
+      });
+    },
+  },   
 };
 </script>
 

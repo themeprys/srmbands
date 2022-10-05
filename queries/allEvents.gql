@@ -3,7 +3,6 @@
     bucket_slug: "srmbands-cms-production",
     read_key: "U9ZScPK1VQrXnFkthLhnRNdXjHjnkSvxBSFAMU4QtpTQWRULIl",
     input: {
-    sort: published_at_dec
     query: {
       type: "events"
     }

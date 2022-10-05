@@ -4,7 +4,6 @@
     read_key: "U9ZScPK1VQrXnFkthLhnRNdXjHjnkSvxBSFAMU4QtpTQWRULIl",
     input: {
     limit: 4,          
-    sort: published_at_dec
 
     query: {
       type: "news"

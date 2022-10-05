@@ -1,7 +1,7 @@
 <template>
   <div class="columns is-multiline">
     <template v-if="getObjects">
-    <div class="column is-4" v-for="roster in getObjects.objects" :key="roster.id">
+    <div class="column is-4" v-for="roster in listRosters" :key="roster.id">
       <div class="card px-3 srm_newslist">
         <router-link :to="'/rosters/' + roster.slug">
           <div class="card-image">
@@ -63,6 +63,15 @@ export default {
       query: getObjects
     }
   }, 
+  computed: {
+    listRosters() {
+      return this.getObjects.objects.slice().sort((a, b) => {
+        return (
+          new Date(a.metadata.urutan_roster) - new Date(b.metadata.urutan_roster)
+        );
+      });
+    },
+  },  
 };
 </script>
 

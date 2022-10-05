@@ -56,8 +56,10 @@ head() {
   apollo: {
   getObjects: {
       prefetch: true,
-      query: getObjects
-    }
+      query: getObjects,
+
+  }
   },    
+
 };
 </script>

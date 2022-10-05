@@ -4,8 +4,7 @@
     read_key: "U9ZScPK1VQrXnFkthLhnRNdXjHjnkSvxBSFAMU4QtpTQWRULIl",
     input: {
     limit: 8,
-		sort: created_at_asc
-
+    sort: random,
     query: {
       type: "happy-to-helps"
     }

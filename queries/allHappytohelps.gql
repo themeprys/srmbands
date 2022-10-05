@@ -4,7 +4,6 @@
     read_key: "U9ZScPK1VQrXnFkthLhnRNdXjHjnkSvxBSFAMU4QtpTQWRULIl",
     input: {
       limit: 30,
-		sort: created_at_asc
 
     query: {
       type: "happy-to-helps"
@@ -14,6 +13,7 @@
         id
 		content
 		title
+    created_at
         metadata
         slug
 	}
