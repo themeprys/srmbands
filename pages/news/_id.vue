@@ -9,6 +9,13 @@ import getObjects from "~/queries/oneObject";
 
 export default {
   layout: "master",
+  data() {
+    return {
+      title: "SRM News - SRM Bookings And Services Official Site",
+      content:
+        "Senang Rasanya Membantu",
+    };
+  },  
   apollo: {
     getObjects: {
       prefetch: true,
@@ -22,7 +29,7 @@ export default {
   },
 head() {
     return {
-      title: this.getObjects.objects.title,
+      title: this.title,
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
@@ -33,7 +40,7 @@ head() {
         {
           hid: "og:title",
           name: "og:title",
-          content: this.getObjects.objects.title,
+          content: this.title,
         },
         {
           hid: "og:site_name",

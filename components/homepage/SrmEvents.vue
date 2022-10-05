@@ -5,7 +5,7 @@
         <p>SRM Events</p>
       </div>
 
-      <div class="column is-6" v-for="event in getObjects.objects" :key="event.id" >
+      <div class="column is-4" v-for="event in eventHome.slice(0, 3)" :key="event.id" >
         <div class="card px-3 srm_newslist">
           <router-link :to="/event/ + event.slug">
             <div class="card-image">
@@ -20,7 +20,7 @@
               <div class="media">
                 <div class="media-content">
                   <p class="title is-4" v-html="event.title"></p>
-                  <!-- <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time> -->
+                  <time :datetime="event.metadata.event_date">Event Date: {{event.metadata.event_date | formatDate}}</time>
                 </div>
               </div>
             </div>
@@ -38,7 +38,7 @@ import getObjects from "~/queries/homeEvents";
 export default {
   data() {
     return {
-      // srmEvents: null,
+      date: new Date(),
     };
   },
   // async mounted() {
@@ -52,6 +52,16 @@ export default {
     }
   },
 
+
+computed: {
+    eventHome() {
+      return this.getObjects.objects.slice().sort((b, a) => {
+        return (
+          new Date(a.metadata.event_date) - new Date(b.metadata.event_date)
+        );
+      });
+    },
+  },
 };
 </script>
 

@@ -20,7 +20,7 @@
           class="srm_title news is-size-1 has-text-centered has-text-weight-bold has-text-black"
           v-html="news.title"
         ></h1>
-        <div class="srm_time"><time :datetime="news.metadata.tanggal">Posted on {{ news.metadata.tanggal }}</time></div>
+        <div class="srm_time"><time :datetime="news.metadata.tanggal">Posted on {{ news.metadata.tanggal | formatDate}}</time></div>
         <center>
           <img class="srm_image_item" :src="news.metadata.foto.url" alt="SRM Bands" />
         </center>
@@ -52,31 +52,36 @@
 // import axios from "axios";
 
 export default {
+    data() {
+    return {
+      date: new Date(),
+    };
+  },
   head() {
     return {
-      // title: "SRM Bands Bookings & Services - " + this.newsItem.title,
+      title: this.data?.objects[0].title + " | SRM Bands Bookings & Services",
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: "description",
           name: "description",
-          content: this.title,
+          content: "Senang Rasanya Membantu",
         },
         {
-          hid: "og:title",
-          name: "og:title",
-          content: this.title,
+          hid: 'og:title',
+          name: 'og:title',
+          content: "SRM Bookings And Services Official Site",
         },
         {
-          hid: "og:site_name",
-          name: "og:site_name",
-          content: this.title,
+          hid: 'og:site_name',
+          name: 'og:site_name',
+          content: "SRM Bookings And Services Official Site",
         },
         {
-          hid: "og:description",
-          name: "og:description",
-          content: this.title,
-        },
+          hid: 'og:description',
+          name: 'og:description',
+          content: "Senang Rasanya Membantu",
+        },                
       ],
     };
   },

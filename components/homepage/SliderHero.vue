@@ -28,7 +28,7 @@
     </template>
         <template v-if="getObjects">
 
-      <b-carousel-item  v-for="hero in getObjects.objects" :key="hero.id">
+      <b-carousel-item  v-for="hero in listHomehero" :key="hero.id">
         <section class="hero is-large">
           <div class="filter"></div>
           <div class="hero-body">
@@ -75,6 +75,15 @@ export default {
       query: getObjects
     }
   },
+computed: {
+    listHomehero() {
+      return this.getObjects.objects.slice().sort((b, a) => {
+        return (
+          new Date(a.metadata.tanggal) - new Date(b.metadata.tanggal)
+        );
+      });
+    },
+  },  
   // async mounted() {
   //   const response = await axios.get(
   //     "https://cms.xabi.us/api/v1/srmsliderhero"

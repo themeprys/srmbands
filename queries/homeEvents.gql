@@ -3,17 +3,16 @@
     bucket_slug: "srmbands-cms-production",
     read_key: "U9ZScPK1VQrXnFkthLhnRNdXjHjnkSvxBSFAMU4QtpTQWRULIl",
     input: {
-    limit: 2,
     query: {
       type: "events"
     }
   }) {
     objects {
-        id
+    id
 		content
 		title
-        metadata
-        slug
+    metadata
+    slug
 	}
 }
 }

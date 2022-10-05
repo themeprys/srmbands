@@ -50,9 +50,9 @@
 // import axios from "axios";
 
 export default {
-  head() {
+ head() {
     return {
-//      title: "SRM Bands Bookings & Services - " + this.artistItem.title,
+      title: this.data?.objects[0].title + " | SRM Bands Bookings & Services",
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {

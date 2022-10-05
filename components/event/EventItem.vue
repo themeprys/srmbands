@@ -8,7 +8,7 @@
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/event">SRM News</a>
+            <a href="/event">SRM Event</a>
           </li>
           <li class="is-active">
             <a href="#" aria-current="page" v-html="event.title"></a>
@@ -21,7 +21,7 @@
           class="srm_title is-size-1 has-text-centered has-text-weight-bold has-text-black"
           v-html="event.title"
         ></h1>
-        <div class="srm_time"><time :datetime="event.metadata.event_date">Event date: {{ event.metadata.event_date }}</time></div>
+        <div class="srm_time"><time :datetime="event.metadata.event_date">Event date: {{ event.metadata.event_date | formatDate }}</time></div>
         <center>
           <img
             class="srm_image_item"
@@ -60,32 +60,43 @@
 // import axios from "axios";
 
 export default {
-  head() {
+  name: 'eventitem',
+  data() {
     return {
-      // title: "SRM Bands Bookings & Services -" + this.eventItem.title,
-      meta: [
+      date: new Date(),
+    };
+  },
+  props: ["data"],
+
+  head(){
+    return {
+      title: this.data?.objects[0].title + " | SRM Bands Bookings & Services",
+ meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: "description",
           name: "description",
-          content: "SRM Bands Bookings & Services",
+          content: "Senang Rasanya Membantu",
         },
-      ],
-    };
-  },
-  data() {
-    return {
-      // eventItem: "",
-    };
-  },
-    props: ["data"],  
-  // async mounted() {
-  //   let uri = "https://cms.xabi.us/api/v1/srmevent/" + this.$route.params.id;
-  //   axios.get(uri).then((response) => {
-  //     this.eventItem = response.data[0];
-  //   });
-  // },
-};
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: "SRM Bookings And Services Official Site",
+        },
+        {
+          hid: 'og:site_name',
+          name: 'og:site_name',
+          content: "SRM Bookings And Services Official Site",
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: "Senang Rasanya Membantu",
+        },                
+      ],      
+    }
+  }
+}
 </script>
 
 <style>

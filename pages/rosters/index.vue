@@ -21,7 +21,7 @@ export default {
   layout: "master",
   data() {
     return {
-      title: "SRM News - SRM Bookings And Services Official Site",
+      title: "Our Rosters - SRM Bookings And Services Official Site",
       content: "Senang Rasanya Membantu",
     };
   },
