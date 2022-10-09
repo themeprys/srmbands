@@ -70,7 +70,7 @@ export default {
 
   head(){
     return {
-      title: this.data?.objects[0].title + " | SRM Bands Bookings & Services",
+      title: (this.data?.objects[0].title || "Event Schedule") + " - SRM Bookings and Services Official Site",
  meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
