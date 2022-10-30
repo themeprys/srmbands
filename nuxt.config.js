@@ -25,9 +25,9 @@ export default {
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
   */
-  target: 'static',
+  // target: 'static',
 
-  // mode: 'universal',
+  mode: 'universal',
   env: {
     authCookieName: 'srmbandsid'
     //    authCookieName: 'strapi_nuxt_auth_demo'
