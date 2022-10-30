@@ -13,7 +13,7 @@
             <div class="card-image">
               <figure class="image is-1by1">
                 <img
-                  :src="happy.metadata.foto.url"
+                  :src="happy.metadata.foto.imgix_url"
                   alt="SRM Bands"
                 />
               </figure>

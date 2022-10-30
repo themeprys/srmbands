@@ -37,7 +37,7 @@
               <b-button type="is-large is-outlined is-bookings" class="srm_hero_link">Read More</b-button>
             </nuxt-link>
           </div>
-          <img :src="hero.metadata.foto.url" alt="SRM Bands" />
+          <img :src="hero.metadata.foto.imgix_url" alt="SRM Bands" />
         </section>
       </b-carousel-item>
         </template>

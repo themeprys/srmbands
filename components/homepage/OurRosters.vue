@@ -11,7 +11,7 @@
           <div class="card-image">
             <figure class="image is-1by1">
               <img
-                :src="roster.metadata.foto_band.url"
+                :src="roster.metadata.foto_band.imgix_url"
                 alt="Our Roster"
               />
             </figure>

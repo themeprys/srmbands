@@ -11,7 +11,7 @@
             <div class="card-image">
               <figure class="image is-16by9">
                 <img
-                  :src="event.metadata.foto.url"
+                  :src="event.metadata.foto.imgix_url"
                   alt="Placeholder image"
                 />
               </figure>
