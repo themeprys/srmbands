@@ -134,7 +134,6 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
-    extend (config, ctx) {
-    }
+
   }
 }

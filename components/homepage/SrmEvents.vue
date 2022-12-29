@@ -9,7 +9,7 @@
         <div class="card px-3 srm_newslist">
           <router-link :to="/event/ + event.slug">
             <div class="card-image">
-              <figure class="image is-16by9">
+              <figure class="image is-1by1">
                 <img
                   :src="event.metadata.foto.imgix_url"
                   alt="Placeholder image"
