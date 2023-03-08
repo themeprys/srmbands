@@ -8,9 +8,6 @@
           "serverFiles": ["queries/**"
         ]
         },
-        "tscOptions": {
-          "sourceMap": false
-        },
         "internalServer": true
       }
     ]
