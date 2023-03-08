@@ -5,8 +5,12 @@
         "src": "nuxt.config.js",
         "use": "@nuxtjs/vercel-builder@0.22.1",
         "config": {
-          "serverFiles": ["server-middleware/**"]
-        }        
+          "serverFiles": ["queries/**"]
+        },
+        "tscOptions": {
+          "sourceMap": false
+        },
+        "internalServer": true
       }
     ]
   }
